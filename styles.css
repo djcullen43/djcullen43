@@ -2,25 +2,27 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
+    background: linear-gradient(135deg, #f4f4f9 30%, #ffffff);
     color: #333;
 }
 
 header {
     background-color: #4CAF50;
     color: white;
-    padding: 20px;
+    padding: 40px 20px;
     text-align: center;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5em;
+    font-size: 3em; /* Larger font for your name */
+    letter-spacing: 2px;
 }
 
 header p {
-    margin: 0;
-    font-size: 1.2em;
+    margin: 10px 0;
+    font-size: 1.5em; /* Larger subtitle */
+    font-weight: 300;
 }
 
 nav {
@@ -40,7 +42,7 @@ nav a {
 }
 
 #projects h2 {
-    font-size: 2em;
+    font-size: 2.2em;
     margin-bottom: 40px;
 }
 
@@ -52,47 +54,88 @@ nav a {
 
 .project {
     background-color: white;
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
 }
 
 .project h3 {
     margin-top: 0;
+    font-size: 1.8em;
 }
 
 .project p {
-    font-size: 1em;
+    font-size: 1.1em;
+    line-height: 1.6;
 }
 
 .project a {
     color: #4CAF50;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.2s;
 }
 
 .project a:hover {
-    text-decoration: underline;
+    color: #388E3C; /* Darker shade of green on hover */
 }
 
 #contact {
     background-color: #f0f0f0;
-    padding: 50px 20px;
+    padding: 60px 20px;
     text-align: center;
 }
 
 #contact h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
+    font-size: 2.2em;
+    margin-bottom: 25px;
 }
 
 #contact p {
     font-size: 1.2em;
+    line-height: 1.8;
 }
 
 footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 40px 20px;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    header p {
+        font-size: 1.2em;
+    }
+
+    .project {
+        padding: 20px;
+    }
+
+    .project h3 {
+        font-size: 1.5em;
+    }
+
+    .project p {
+        font-size: 1em;
+    }
 }
